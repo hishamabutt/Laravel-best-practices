@@ -21,3 +21,5 @@ Route::get('/', function () {
 
 
 Route::post('/create', 'App\Http\Controllers\User@create');
+Route::post('/formrequesttest', 'App\Http\Controllers\User@formRequestTest');
+Route::post('/formrequesttest2', 'App\Http\Controllers\User@formRequestTest2');
