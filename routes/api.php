@@ -25,5 +25,5 @@ Route::get('/', function () {
 
 
 Route::get('loging', function () {
-    Log::info("this is info log");
+    Log::channel('information')->info("this is info log");
 });

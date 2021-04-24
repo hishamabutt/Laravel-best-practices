@@ -35,6 +35,12 @@ return [
     */
 
     'channels' => [
+
+        'information' => [
+            'driver' => 'single',
+            'path' => storage_path('logs/' . date("Y-m-d") . '_information.log'),
+        ],
+
         'stack' => [
             'driver' => 'stack',
             'channels' => ['single'],
