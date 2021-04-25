@@ -26,6 +26,13 @@ class User extends Controller
         return UserResource::collection(ModelsUser::all());
     }
 
+    public function responseTest(Request $request)
+    {
+        return response()->success(UserResource::collection(ModelsUser::all()));
+        // return response()->success('Successful');
+
+    }
+
     public function formRequestTest(RequestsUser $request)
     {
         try {
