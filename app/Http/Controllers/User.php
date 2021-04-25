@@ -30,8 +30,8 @@ class User extends Controller
     public function formRequestTest2(Request $request)
     {
         try {
-            // $this->formRequestTest($request);
-            app('App\Http\Requests\User');
+            $this->formRequestTest($request);
+            // app('App\Http\Requests\User');
             return response()->json($request->all());
         } catch (HttpResponseException $e) {
             // return get_class($e);
