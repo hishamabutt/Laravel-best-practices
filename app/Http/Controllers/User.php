@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Exceptions\CustomRequestException;
 use App\Http\Requests\User as RequestsUser;
+use App\Http\Resources\UserCollection;
+use App\Http\Resources\UserResource;
 use App\Models\User as ModelsUser;
 use Exception;
 use Illuminate\Http\Exceptions\HttpResponseException;
@@ -16,6 +18,12 @@ class User extends Controller
     {
         $user = ModelsUser::store($request);
         return $user;
+    }
+
+    public function read(Request $request)
+    {
+        // return UserCollection::collection(ModelsUser::all());
+        return UserResource::collection(ModelsUser::all());
     }
 
     public function formRequestTest(RequestsUser $request)
