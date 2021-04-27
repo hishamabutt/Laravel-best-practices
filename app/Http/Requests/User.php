@@ -10,7 +10,7 @@ use Illuminate\Http\Exceptions\HttpResponseException;
 class User extends FormRequest
 {
 
-    protected $stopOnFirstFailure = true;
+    // protected $stopOnFirstFailure = true;
     /**
      * Determine if the user is authorized to make this request.
      *
@@ -34,15 +34,15 @@ class User extends FormRequest
         ];
     }
 
-    protected function failedValidation(Validator $validator)
-    {
-        throw new HttpResponseException(response()->json([
-            'errors' => $validator->errors(),
-            'status' => false
-        ], 422));
-        // throw new CustomRequestException(response()->json([
-        //     'errors' => $validator->errors(),
-        //     'status' => false
-        // ], 422));
-    }
+    // protected function failedValidation(Validator $validator)
+    // {
+    //     // throw new HttpResponseException(response()->json([
+    //     //     'errors' => $validator->errors(),
+    //     //     'status' => false
+    //     // ], 422));
+    //     // throw new CustomRequestException(response()->json([
+    //     //     'errors' => $validator->errors(),
+    //     //     'status' => false
+    //     // ], 422));
+    // }
 }
